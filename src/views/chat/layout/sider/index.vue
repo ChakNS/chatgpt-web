@@ -59,15 +59,9 @@ watch(
 
 <template>
   <NLayoutSider
-    :collapsed="collapsed"
-    :collapsed-width="0"
-    :width="260"
-    :show-trigger="isMobile ? false : 'arrow-circle'"
-    collapse-mode="transform"
-    position="absolute"
-    bordered
-    :style="getMobileClass"
-    @update-collapsed="handleUpdateCollapsed"
+    :collapsed="collapsed" :collapsed-width="0" :width="260" :show-trigger="isMobile ? false : 'arrow-circle'"
+    collapse-mode="transform" position="absolute" collapsed-trigger-style="display: none;" bordered
+    :style="getMobileClass" @update-collapsed="handleUpdateCollapsed"
   >
     <div class="flex flex-col h-full" :style="mobileSafeArea">
       <main class="flex flex-col flex-1 min-h-0">
@@ -93,3 +87,9 @@ watch(
   </template>
   <PromptStore v-model:visible="show" />
 </template>
+
+<style>
+.n-layout-toggle-button {
+  display: none !important;
+}
+</style>

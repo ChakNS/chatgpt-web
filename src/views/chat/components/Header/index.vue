@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { NImage } from 'naive-ui'
 import { computed, nextTick } from 'vue'
 import { HoverButton, SvgIcon } from '@/components/common'
 import { useAppStore, useChatStore } from '@/store'
@@ -47,10 +48,7 @@ function toggleUsingContext() {
   >
     <div class="relative flex items-center justify-between min-w-0 overflow-hidden h-14">
       <div class="flex items-center">
-        <button
-          class="flex items-center justify-center w-11 h-11"
-          @click="handleUpdateCollapsed"
-        >
+        <button class="flex items-center justify-center w-11 h-11" @click="handleUpdateCollapsed">
           <SvgIcon v-if="collapsed" class="text-2xl" icon="ri:align-justify" />
           <SvgIcon v-else class="text-2xl" icon="ri:align-right" />
         </button>
@@ -62,6 +60,9 @@ function toggleUsingContext() {
         {{ currentChatHistory?.title ?? '' }}
       </h1>
       <div class="flex items-center space-x-2">
+        <HoverButton>
+          <NImage width="20" object-fit="contain" :show-toolbar="false" src="/code.jpg" />
+        </HoverButton>
         <HoverButton @click="toggleUsingContext">
           <span class="text-xl" :class="{ 'text-[#4b9e5f]': usingContext, 'text-[#a8071a]': !usingContext }">
             <SvgIcon icon="ri:chat-history-line" />
