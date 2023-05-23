@@ -544,11 +544,5 @@ onUnmounted(() => {
         </div>
       </div>
     </footer>
-    <!-- <div class="pd-wrapper flex flex-column items-center" style="padding: 0 12vw;">
-      <NImage width="120" object-fit="contain" :show-toolbar="false" src="/code.jpg" />
-      <div style="flex: 1; text-align: center;">
-        如果对您有帮助，微信扫码随意打赏～
-      </div>
-    </div> -->
   </div>
 </template>
