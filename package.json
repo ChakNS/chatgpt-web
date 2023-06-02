@@ -1,11 +1,11 @@
 {
-  "name": "chatgpt-web",
+  "name": "brainWave-ai",
   "version": "2.10.9",
   "private": false,
-  "description": "ChatGPT Web",
+  "description": "BrainWave AI",
   "author": "ChenZhaoYu <chenzhaoyu1994@gmail.com>",
   "keywords": [
-    "chatgpt-web",
+    "ai",
     "chatgpt",
     "chatbot",
     "vue"
