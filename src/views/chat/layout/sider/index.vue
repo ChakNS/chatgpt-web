@@ -16,6 +16,7 @@ const show = ref(false)
 
 const collapsed = computed(() => appStore.siderCollapsed)
 
+// @ts-expect-error
 window.collapsed = (bool) => {
   appStore.setSiderCollapsed(bool)
 }
